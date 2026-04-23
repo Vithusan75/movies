@@ -2,23 +2,13 @@
 require("header.php");
 require_once("fonctions.php");
 
-if(isset($_GET['id']) && !empty($_GET['id'])) {
-    $acteur = getActeurDetail($_GET['id']);
-    $films = getFilmsActeur($_GET['id']);
+if(isset($_GET['query']) && !empty($_GET['query'])) {
+    $films = rechercherFilm($_GET['query']);
 
-   
     echo "<div class='container py-5'>";
-    echo "<h1>" . $acteur['name'] . "</h1>";
-    echo "<img src='https://image.tmdb.org/t/p/w185" . $acteur['profile_path'] . "'>";
-
-    if(!empty($acteur['biography'])) {
-        echo "<p>" . nl2br($acteur['biography']) . "</p>";
-    } else {
-        echo "<p>Aucune biographie disponible pour cet acteur.</p>";
-    }
-
-    echo "<h4>Films</h4>";
+    echo "<h4>Résultats pour : " . $_GET['query'] . "</h4>";
     echo "<div class='row row-cols-2 row-cols-md-4 g-4'>";
+    
     foreach($films as $film) {
         $affiche = $film['poster_path']
             ? 'https://image.tmdb.org/t/p/w185' . $film['poster_path']

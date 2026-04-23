@@ -1,15 +1,11 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <title>Movies</title>
-  
   <style>
     .form-outline i {
     position: absolute;
@@ -18,10 +14,8 @@
     pointer-events: none;
     }
   </style>
-    
   </head>
   <body>
-         
   <nav class="navbar fixed navbar-expand-md navbar-dark text-withe bg-dark shadow py-2">
     <div class="container">
     <a href="popular.php" class="navbar-brand d-flex align-items-left ">
@@ -47,7 +41,7 @@
                   <li><a class="dropdown-item" href="genreMovies.php?id=37">Western</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=28">Action</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=12">Aventure</a></li>
-                   <li><a class="dropdown-item" href="genreMovies.php?id=16">Animation</a></li>
+                  <li><a class="dropdown-item" href="genreMovies.php?id=16">Animation</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=35">Comedy</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=80">Crime</a></li>
                   <li><a class="dropdown-item" href="genreMovies.php?id=99">Documentaire</a></li>
@@ -57,20 +51,18 @@
             </li>
           </ul>
         <ul class="nav navbar-nav w-100 justify-content-end">
-          
-            <div data-mdb-input-init class="form-outline  me-3 ">
-            <form action="#" id="search-moviess"  method="get">
+            <div data-mdb-input-init class="form-outline me-3">
+            <form action="searchFilm.php" id="search-moviess" method="get">
               <input type="text" class="form-control ps-5 rounded-pill" placeholder="Search Films" name="query" style="max-width:200px;" />
               <i class="bi-search ms-3"></i>
             </form>
             </div>
-            <div data-mdb-input-init class="form-outline  me-3">
-            <form action="#" id="search-acteurs"  method="get">
-              <input type="text" class="form-control ps-5 rounded-pill " placeholder="Search Acteurs" name="query" style="max-width:200px;"/>
+            <div data-mdb-input-init class="form-outline me-3">
+            <form action="searchActeur.php" id="search-acteurs" method="get">
+              <input type="text" class="form-control ps-5 rounded-pill" placeholder="Search Acteurs" name="query" style="max-width:200px;"/>
               <i class="bi-search ms-3"></i>
             </form>
             </div>
-
         </ul>
       </div>
     </div>
